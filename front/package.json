@@ -13,9 +13,9 @@
     "react-scripts": "3.4.3"
   },
   "scripts": {
-    "start": "export PORT=8001 && react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "export PORT=8001 && cross-env NODE_PATH=src react-scripts start",
+    "build": "cross-env NODE_PATH=src react-scripts build",
+    "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
