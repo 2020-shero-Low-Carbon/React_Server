@@ -7,13 +7,14 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "cross-env": "^7.0.2",
+    "http-proxy-middleware": "^1.0.6",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3"
   },
   "scripts": {
-    "start": "export PORT=8001 &&  react-scripts start",
+    "start": "export PORT=8001 && react-scripts start",
     "build": " react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -32,10 +33,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "proxy": {
-    "/back": {
-      "target": "http://34.64.182.81:8000/"
-    }
   }
 }
