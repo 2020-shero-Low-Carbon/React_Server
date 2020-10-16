@@ -2,7 +2,7 @@ import React,{ Component } from 'react';
  
 class Data extends Component {
     state = {
-        posts : [],
+        posts : {},
     }
     componentWillMount() {
         fetch('/data')
