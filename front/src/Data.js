@@ -9,8 +9,7 @@ class Data extends Component {
             .then(response => response.json())
             .then(data => this.setState({
                 posts: data
-            }))
-          });
+            }));
     }
     render() {
         return (
