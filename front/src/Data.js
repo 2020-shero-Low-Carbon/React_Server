@@ -2,15 +2,16 @@ import React,{ useState } from 'react';
  
 class Data extends Component {
     state = {
-        data : [],
+        posts : [],
     }
-    fetch('/data')
-     .then(response => response.json())
-     .then(data => {
-        this.setState({
-            data : data
-        })
-      })
+    componentWillMount() {
+        fetch('/data')
+            .then(response => response.json())
+            .then(data => this.setState({
+                posts: data
+            }))
+          });
+    }
     render() {
         return (
             <div>
