@@ -5,6 +5,7 @@ class Data extends Component {
         posts : [],
     }
     componentWillMount() {
+        console.log("hi console")
         fetch('http://34.64.182.81:8000/data')
             .then(response => console.log(response))
             .then(response => response.json())
