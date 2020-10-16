@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Data from './Data';
  
-function App() {
-  return (
-    <div>
-      <Data />
-    </div>
-  );
+class App extends Component {
+	render() {
+		return (
+			<div>
+				
+			</div>
+		);
+	}	
 }
- 
+
 export default App;
