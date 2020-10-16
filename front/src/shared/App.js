@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Data from './Data';
+import Data from '../Data';
  
 class App extends Component {
 	render() {
