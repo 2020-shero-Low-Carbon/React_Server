@@ -1,0 +1,22 @@
+{
+  "name": "low_carbon_serever",
+  "version": "1.0.0",
+  "description": "team low carbon",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2020-shero-Low-Carbon/React_Server.git"
+  },
+  "author": "team_low_carbon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/2020-shero-Low-Carbon/React_Server/issues"
+  },
+  "homepage": "https://github.com/2020-shero-Low-Carbon/React_Server#readme",
+  "dependencies": {
+    "nodemon": "^2.0.5"
+  }
+}
