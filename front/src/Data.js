@@ -5,7 +5,7 @@ class Data extends Component {
         posts : [],
     }
     componentWillMount() {
-        fetch('/data')
+        fetch('/back/data')
             .then(response => response.json())
             .then(data => this.setState({
                 posts: data
