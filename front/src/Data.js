@@ -14,6 +14,7 @@ class Data extends Component {
     render() {
         return (
             <div>
+                hello I am data
                 {this.state.posts.lastname} {this.state.posts.firstname}
             </div>
         );
