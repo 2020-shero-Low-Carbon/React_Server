@@ -9,7 +9,7 @@ class Data extends Component {
         fetch('http://34.64.182.81:8000/data')
             .then(response => response.json())
             .then(dataw => this.setState({
-                posts: data
+                posts: dataw
             }));
     }
     render() {
