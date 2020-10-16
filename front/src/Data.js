@@ -1,4 +1,4 @@
-import React,{ useState } from 'react';
+import React,{ Component } from 'react';
  
 class Data extends Component {
     state = {
@@ -14,7 +14,7 @@ class Data extends Component {
     render() {
         return (
             <div>
-                {data.lastname} {data.firstname}
+                {posts.lastname} {posts.firstname}
             </div>
         );
     }
