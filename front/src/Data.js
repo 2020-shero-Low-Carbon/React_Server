@@ -5,7 +5,7 @@ class Data extends Component {
         data : [],
     }
     fetch("/data")
-     .then(res => res.json())
+     .then(response => response.json())
      .then(data => {
         this.setState({
             data : data
