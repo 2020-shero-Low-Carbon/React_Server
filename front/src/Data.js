@@ -14,7 +14,7 @@ class Data extends Component {
     render() {
         return (
             <div>
-                {posts.lastname} {posts.firstname}
+                {this.state.posts.lastname} {this.state.posts.firstname}
             </div>
         );
     }
