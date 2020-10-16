@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import Data from '../Data';
-import {Home, About} from '../pages'
+import Home from '../pages/Home'
+import About from '../pages/About'
 
 class App extends Component {
 	render() {
