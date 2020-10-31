@@ -6,7 +6,6 @@ const path = require('path');
 router.post('/gwp', (req, res) => {
 	const dates = req.body;
 	console.log(dates)
-	console.log(proc)
 	const pwd_dir = spawn('pwd');
 	pwd_dir.stdout.on('data', function(data){
 		console.log(data.toString());
