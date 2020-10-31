@@ -7,7 +7,7 @@ router.post('/gwp', (req, res) => {
 	const dates = req.body;
 	var my_dir;
 	console.log(dates);
-	const py_cal_gwp = spawn('python3', ['./server/routes/S-HERO.py', dates.syear, dates.smonth, dates.sday, dates.fyear, dates.fmonth, dates.fday, dates.prod]);
+	const py_cal_gwp = spawn('python3', ['../DB/S-HERO.py', dates.syear, dates.smonth, dates.sday, dates.fyear, dates.fmonth, dates.fday, dates.prod]);
 	var result = {
 		gwp : 0.
 	};
