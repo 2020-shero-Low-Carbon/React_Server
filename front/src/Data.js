@@ -28,7 +28,7 @@ class Data extends Component {
         return (
             <div>
                 hello I am data<br/>
-                <b>gwp</b>
+                <b>{this.state.posts.gwp}</b>
             </div>
         );
     }
