@@ -9,12 +9,12 @@ class Data extends Component {
         fetch('http://34.64.182.81:8000/data')
             .then(response => this.setState({
                 string: response
-            }))
+            })
+            );
             //.then(response => response.json())
             //.then(data => this.setState({
             //    posts: data
             //})
-            );
     }
         //        {this.state.posts.lastname} {this.state.posts.firstname}
     render() {
