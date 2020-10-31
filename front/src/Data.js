@@ -3,7 +3,7 @@ import React,{ Component } from 'react';
 class Data extends Component {
     state = {
         posts : [],
-        string : '',
+        string : ,
     }
     componentWillMount() {
         fetch('http://34.64.182.81:8000/data')
