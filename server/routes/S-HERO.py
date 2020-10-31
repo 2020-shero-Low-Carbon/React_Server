@@ -437,7 +437,7 @@ if __name__ == "__main__":
         print("3 : 25-24-15")
         exit
         
-    print('Target Product : ' + tar_prod)
+    #print('Target Product : ' + tar_prod)
     
     Trans_Dict = {}
     trans_fp = open("../2019_trans_dis.txt", 'r')
@@ -478,4 +478,4 @@ if __name__ == "__main__":
     #temp_info, final_gwp = ProdGWP(cur,tar_prod,  tar_year, tar_month, tar_day, lci_db_list)
     temp_info, final_gwp = ProdGWP(cur,tar_prod, start_year, start_month, start_day, end_year, end_month, end_day, lci_db_list, Trans_Dict)
     
-    print('GWP : ' + str(final_gwp))
+    print(str(final_gwp))
