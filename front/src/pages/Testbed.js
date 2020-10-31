@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
  
-class Home extends Component {
+class Testbed extends Component {
 	render() {
 		return (
 			<div>
 				<h2>
-					TEAM Low Carbon Page	
+					Testbed Page	
 				</h2>
 			</div>
 		);
 	}	
 }
 
-export default Home;
+export default Testbed;
