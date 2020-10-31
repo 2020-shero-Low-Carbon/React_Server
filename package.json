@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon server.js",
+    "server": "nodemon server/server.js",
     "front": "cd front && npm start",
     "dev": "concurrently \"npm run server\" \"npm run front\""
   },

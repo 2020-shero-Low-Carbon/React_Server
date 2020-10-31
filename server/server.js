@@ -7,9 +7,11 @@ app.use(cors());
 
 app.get('/data',(req,res)=>{
     const data = {
-        lastname : "dl",
-        firstname : "wlrma"
+        lastname : '',
+        firstname : ''
     };
+    data.lastname = 'low'
+    data.firstname = 'carbon'
     res.json(data);
 })
  
