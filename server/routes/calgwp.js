@@ -12,7 +12,7 @@ router.post('/gwp', (req, res) => {
 		my_dir = data.toString();
 	});
 	pwd_dir.on('close', (code) =>{
-		console.log('pwd finished');
+		console.log('my_dir');
 		const py_cal_gwp = spawn('python3', [my_dir + '/server/routes/S-HERO.py', dates.syear, dates.smonth, dates.sday, dates.fyear, dates.fmonth, dates.fday, dates.prod]);
 		var result = {
 			gwp : 0.
