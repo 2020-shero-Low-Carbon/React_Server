@@ -20,8 +20,8 @@ class Data extends Component {
             body: JSON.stringify(this.state.params)
         })
         .then(response => response.json())
-        .then(data => this.setState({
-            posts: data
+        .then(result => this.setState({
+            posts: result
         }));
     }
     render() {
