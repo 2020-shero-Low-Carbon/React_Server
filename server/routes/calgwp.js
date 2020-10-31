@@ -7,26 +7,18 @@ router.post('/gwp', (req, res) => {
 	const dates = req.body;
 	var my_dir;
 	console.log(dates);
-	const pwd_dir = spawn('ls', ['./server/routes']);
-	pwd_dir.stdout.on('data', function(data){
-		my_dir = data.toString();
+	const py_cal_gwp = spawn('python3', ['./server/routes/S-HERO.py', dates.syear, dates.smonth, dates.sday, dates.fyear, dates.fmonth, dates.fday, dates.prod]);
+	var result = {
+		gwp : 0.
+	};
+	py_cal_gwp.stdout.on('data', function(data){
+		console.log('gwp calculate script running');
+		result.gwp = parseFloat(data.toString());
 	});
-	pwd_dir.on('close', (code) =>{
-		console.log(my_dir);
-		const py_cal_gwp = spawn('python3', ['./server/routes/S-HERO.py', dates.syear, dates.smonth, dates.sday, dates.fyear, dates.fmonth, dates.fday, dates.prod]);
-		var result = {
-			gwp : 0.
-		};
-		py_cal_gwp.stdout.on('data', function(data){
-			console.log('gwp calculate script running');
-			result.gwp = parseFloat(data.toString());
-		});
-
-		py_cal_gwp.on('close', (code) => {
-			console.log('gwp calculate script finished');
-			res.send();
-		});
-	})
+	py_cal_gwp.on('close', (code) => {
+		console.log('gwp calculate script finished');
+		res.send();
+	});
 	
 });
 
