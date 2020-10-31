@@ -2,8 +2,8 @@ import React,{ Component } from 'react';
  
 class Data extends Component {
     state = {
-        posts : [],
-        params : [
+        posts : {},
+        params : {
             syear : '2020',
             smonth : '1',
             sday :'1',
@@ -11,7 +11,7 @@ class Data extends Component {
             fmonth : '12',
             fday : '31',
             prod : '1'
-         ]
+         }
     }
     componentWillMount() {
         fetch('http://34.64.182.81:8000/calgwp/gwp', {
