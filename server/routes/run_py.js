@@ -9,7 +9,7 @@ router.get('/gwp', (req, res) => {
 	};
 	py_cal_gwp.stdout.on('data', function(data){
 		console.log('gwp calculate script running')
-		result.gwp = data.toString()
+		result.gwp = parseFloat(data.toString())
 	});
 
 	py_cal_gwp.on('close', (code) => {
