@@ -7,9 +7,9 @@ class Data extends Component {
             syear : '2020',
             smonth : '1',
             sday :'1',
-            fyear : '2020'
-            fmonth : '12'
-            fday : '31'
+            fyear : '2020',
+            fmonth : '12',
+            fday : '31',
             prod : '1'
          ]
     }
