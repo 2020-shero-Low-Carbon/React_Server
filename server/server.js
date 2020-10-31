@@ -6,6 +6,8 @@ const cors = require('cors');
 app.use(cors());
 app.use(express.json());
 
+app.use('/calgwp', require('./routes/calgwp'));
+
 app.get('/data',(req,res)=>{
     const data = {
         lastname : '',

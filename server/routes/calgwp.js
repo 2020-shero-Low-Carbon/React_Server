@@ -18,3 +18,5 @@ router.post('/gwp', (req, res) => {
 		res.send()
 	});
 });
+
+module.exports = router;
