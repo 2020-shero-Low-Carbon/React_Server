@@ -4,6 +4,7 @@ import pymysql
 import json
 import numpy as np
 import copy
+import sys
 
 DB_User_ID = 'root'
 DB_Passwd  = '0000'
@@ -194,8 +195,8 @@ def FuelDirectGWP(GWP,Fuel) : #경유로 인한 직접배출 GWP계산
 def GWP(ParamSum,WeightIndex,LCIDB,Trans_List) : #LCIDB를 이용한 GWP계산 ###함수이름이랑 변수이름이 같음 수정필요
     Sum = 0
     TotGWPInfo = ParamSum * LCIDB[:19]
-    for i in range(1, 10):
-        TotGWPInfo[i] += ParamSum[i] * Trans_List[i-1]
+    #for i in range(1, 10):
+    #    TotGWPInfo[i] += ParamSum[i] * Trans_List[i-1]
     for i in WeightIndex :
         Sum += TotGWPInfo[i]    
     for i in range(14,len(ParamSum)): # 연료에 대해서는 다시 메소드를 사용해야한다(직접배출량 산정).
@@ -412,13 +413,13 @@ if __name__ == "__main__":
 
     (Remi_DB,cur) = login(DB_User_ID, DB_Passwd, DB_name)
     
-    start_year = int(input('start year = '))
-    start_month = int(input('start month = '))
-    start_day = int(input('start day = '))
-    end_year = int(input('end year = '))
-    end_month = int(input('end month = '))
-    end_day = int(input('end day = '))
-    prod_cond = int(input('0 : 24-150, 1 : 27-150, 2 : 30-150, 3: 35-150'))
+    start_year = int(sys.argv[1])
+    start_month = int(sys.argv[2])
+    start_day = int(sys.argv[3])
+    end_year = int(sys.argv[4])
+    end_month = int(sys.argv[5])
+    end_day = int(sys.argv[6])
+    prod_cond = int(sys.argv[7])
     
     if prod_cond == 0 :
         tar_prod = '25-24-15'
@@ -429,7 +430,11 @@ if __name__ == "__main__":
     elif prod_cond == 3 :
         tar_prod = '25-35-15'
     else :
-        print("target product error occurred!")
+        print("Target product error occurred!")
+		print("0 : 25-24-15")
+		print("1 : 25-24-15")
+		print("2 : 25-24-15")
+		print("3 : 25-24-15")
         exit
         
     print('Target Product : ' + tar_prod)
