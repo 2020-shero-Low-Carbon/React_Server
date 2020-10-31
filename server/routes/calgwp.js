@@ -16,7 +16,7 @@ router.post('/gwp', (req, res) => {
 		result.gwp = parseFloat(data.toString());
 	});
 	py_cal_gwp.stderr.on('data', (data) => {
-		console.log('stderr: ${data}')
+		console.log(data)
 	});
 	py_cal_gwp.on('close', (code) => {
 		console.log('gwp calculate script finished');
