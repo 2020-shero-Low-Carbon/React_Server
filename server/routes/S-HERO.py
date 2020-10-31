@@ -431,10 +431,10 @@ if __name__ == "__main__":
         tar_prod = '25-35-15'
     else :
         print("Target product error occurred!")
-		print("0 : 25-24-15")
-		print("1 : 25-24-15")
-		print("2 : 25-24-15")
-		print("3 : 25-24-15")
+        print("0 : 25-24-15")
+        print("1 : 25-24-15")
+        print("2 : 25-24-15")
+        print("3 : 25-24-15")
         exit
         
     print('Target Product : ' + tar_prod)
