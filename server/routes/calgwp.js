@@ -7,13 +7,13 @@ router.post('/gwp', (req, res) => {
 	const dates = req.body;
 	var my_dir;
 	console.log(dates);
-	const pwd_dir = spawn('pwd');
+	const pwd_dir = spawn('ls', ['./server/routes']);
 	pwd_dir.stdout.on('data', function(data){
 		my_dir = data.toString();
 	});
 	pwd_dir.on('close', (code) =>{
 		console.log(my_dir);
-		const py_cal_gwp = spawn('python3', [my_dir + '/server/routes/S-HERO.py', dates.syear, dates.smonth, dates.sday, dates.fyear, dates.fmonth, dates.fday, dates.prod]);
+		const py_cal_gwp = spawn('python3', ['./server/routes/S-HERO.py', dates.syear, dates.smonth, dates.sday, dates.fyear, dates.fmonth, dates.fday, dates.prod]);
 		var result = {
 			gwp : 0.
 		};
