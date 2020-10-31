@@ -20,7 +20,7 @@ router.post('/gwp', (req, res) => {
 	});
 	py_cal_gwp.on('close', (code) => {
 		console.log('gwp calculate script finished');
-		res.send();
+		res.send(result);
 	});
 	
 });
