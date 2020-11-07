@@ -1,9 +1,15 @@
+<<<<<<< HEAD
 var request = require('request');
 var express = require('express');
 var router = express.Router();
 const mysql = require('mysql');
 const dbconfig = require('../config/database.js');
 const db_connection = mysql.createConnection(dbconfig);
+=======
+
+var request = require('request');
+
+>>>>>>> origin/master
 
 var id = '51s94m45dn';
 var key = 'gRUJE74piU8jN2dBcw57bUDu9Ll93AHyUwVI8FUk';
@@ -12,6 +18,7 @@ var goal = '126.971687,37.299039'; //위와동일
 var option = 'trafast';
 //trafast 빠른길 tracomfort 편한길 traoptimal 최적 traavoidtoll 무료
 
+<<<<<<< HEAD
 
 
 //연도, 월, 일, 원료, 기업명, 주소, 입고량, 거리 
@@ -43,3 +50,28 @@ router.post('/insert', (req, res) => {
 });
 
 module.exports = router;
+=======
+var url = "https://naveropenapi.apigw.ntruss.com/map-direction/v1/driving";
+var queryParams = '?' + encodeURIComponent('start') + '=' + start; /* Service Key*/
+queryParams += '&' + encodeURIComponent('goal') + '=' + goal; /* */
+queryParams += '&' + encodeURIComponent('option') + '=' + option; /* */
+
+var urlq = url + queryParams;
+
+
+request.get({
+	uri:urlq,
+	headers:{
+		'X-NCP-APIGW-API-KEY-ID':id,
+		'X-NCP-APIGW-API-KEY':key
+	}
+},function (error, response, body) {
+    console.log('Status', response.statusCode);
+    console.log('Headers', JSON.stringify(response.headers));
+    var bdjs = JSON.parse(body); //json으로 파싱
+	console.log(bdjs);
+	var distance = bdjs.route.trafast[0].summary.distance;
+	//console.log(distance);
+
+});
+>>>>>>> origin/master
