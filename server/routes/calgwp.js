@@ -36,6 +36,7 @@ router.post('/gwplist', (req, res) => {
 	});
 	py_cal_gwplist.on('close', (code) => {
 		console.log('gwp calculate script finished');
+		console.log(result)
 		res.send(result);
 	});
 });
