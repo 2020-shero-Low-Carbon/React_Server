@@ -7,6 +7,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use('/calgwp', require('./routes/calgwp'));
+app.use('/map', require('./routes/map'));
 
 app.get('/data',(req,res)=>{
     const data = {
