@@ -40,6 +40,7 @@ router.post('/insert', (req, res) => {
 			if (error) throw error;
 		});
 		db_connection.end();
+		res.send('ingredient information added');
 	});
 });
 

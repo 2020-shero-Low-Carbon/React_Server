@@ -16,6 +16,7 @@ router.get('/making', (req, res) => {
 		if (error) throw error;
 	});
 	db_connection.end();
+	res.send('made history added')
 });
 
 module.exports = router;
