@@ -25,4 +25,19 @@ router.post('/gwp', (req, res) => {
 	
 });
 
+router.post('/gwplist', (req, res) => {
+	const dates = req.body;
+	var my_dir;
+	console.log(dates);
+	const py_cal_gwplist = spawn('python3', ['../DB/src/gwp_get_min.py', dates.mode, dates.syear, dates.smonth, dates.sday, dates.fyear, dates.fmonth, dates.fday, dates.prod]);
+	py_cal_gwp.stdout.on('data', function(data){
+		console.log(data.toString());
+		result = JSON.parse(data.toString());
+	});
+	py_cal_gwp.on('close', (code) => {
+		console.log('gwp calculate script finished');
+		res.send(result);
+	});
+});
+
 module.exports = router;
