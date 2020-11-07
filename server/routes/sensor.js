@@ -15,7 +15,7 @@ router.get('/making', (req, res) => {
 	db_connection.query(query_str, (error, rows, fields) => {
 		if (error) throw error;
 	});
-	db_connection.end();
+	//db_connection.end();
 	res.send('made history added')
 });
 
