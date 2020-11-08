@@ -37,7 +37,6 @@ router.post('/insert', (req, res) => {
 		//console.log(urlq);
 		db_connection.connect();
 		db_connection.query('insert into '+params.fact+ '_ (연도, 월, 일, 원료, 기업명, 주소, 입고량, 거리) values('+params.year+','+params.month+','+params.day+','+params.ingredient+','+params.company+','+params.amount+','+distance+')', (error, rows, fields) => {
-			db_connection.release();
 			if (error) throw error;
 		});
 		//db_connection.end();
