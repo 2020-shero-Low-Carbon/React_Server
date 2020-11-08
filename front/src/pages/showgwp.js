@@ -7,7 +7,6 @@ class ShowGWP extends Component {
         mindate : '',
         gwplist : {},
         params : {
-            mode : '0',
             syear : '2017',
             smonth : '1',
             sday :'1',
@@ -25,22 +24,9 @@ class ShowGWP extends Component {
         })
         .then(response => response.json())
         .then(result => this.setState({
-            gwplist: result
-        }));
-        this.setState({
-            params : {
-                mode : '1'
-            }
-        });
-        fetch('http://34.64.182.81:8000/calgwp/gwplist', {
-            method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify(this.state.params)
-        })
-        .then(response => response.json())
-        .then(result => this.setState({
-            mindate : result.date,
-            mingwp : result.gwp
+            gwplist : result.listGWP,
+            mingwp : result.minGWP.gwp,
+            mindate : result.minGWP.date
         }));
     }
     render() {

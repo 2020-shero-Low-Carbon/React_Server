@@ -14,7 +14,7 @@ router.post('/gwp', (req, res) => {
 		result.gwp = parseFloat(data.toString());
 	});
 	py_cal_gwp.stderr.on('data', (data) => {
-		console.log(data.toString())
+		console.log(data.toString());
 	});
 	py_cal_gwp.on('close', (code) => {
 		console.log('gwp calculate script finished');
@@ -27,7 +27,7 @@ router.post('/gwplist', (req, res) => {
 	const dates = req.body;
 	var my_dir;
 	console.log(dates);
-	const py_cal_gwplist = spawn('python3', ['../DB/src/gwp_get_min.py', dates.mode, dates.syear, dates.smonth, dates.sday, dates.fyear, dates.fmonth, dates.fday, dates.prod]);
+	const py_cal_gwplist = spawn('python3', ['../DB/src/gwp_get_min.py', dates.syear, dates.smonth, dates.sday, dates.fyear, dates.fmonth, dates.fday, dates.prod]);
 	py_cal_gwplist.stdout.on('data', function(data){
 		result = JSON.parse(data.toString());
 	});
