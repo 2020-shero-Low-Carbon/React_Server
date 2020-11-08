@@ -47,6 +47,14 @@ class ShowGWP extends Component {
             <div>
                 <b>{this.state.params.syear}-{this.state.params.smonth}-{this.state.params.sday} ~ {this.state.params.fyear}-{this.state.params.fmonth}-{this.state.params.fday} , 25-24-150</b><br/>
                 <b>{this.state.gwplist["2017-12-31"]}</b><br/>
+                <form onSubmit={this.handleSubmit}>
+                    <input
+                        placeholder="LastGWP in float"
+                        value={this.state.inputgwp}
+                        onChange={this.handleChange}
+                    />
+                    <button type="submit">Apply</button>
+                </form>
                 {this.state.lastgwp}<br/>
                 Cut-Down Rate : 3.3% <br/>
                 {
@@ -55,13 +63,6 @@ class ShowGWP extends Component {
                         else return (<div>Low-Carbon-Authentification : disable</div>);
                     })()
                 }
-                <form onSubmit={this.handleSubmit}>
-                    <input
-                        placeholder="LastGWP in float"
-                        value={this.state.inputgwp}
-                        onChange={this.handleChange}
-                    />
-                </form>
                 {this.state.mingwp} <br/>
                 {this.state.mindate} <br/>
             </div>
