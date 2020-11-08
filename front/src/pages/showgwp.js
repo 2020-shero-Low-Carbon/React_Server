@@ -28,7 +28,9 @@ class ShowGWP extends Component {
             gwplist: result
         }));
         this.setState({
-            params[mode] : '1',
+            params : {
+                mode : '1'
+            }
         });
         fetch('http://34.64.182.81:8000/calgwp/gwplist', {
             method: 'POST',
