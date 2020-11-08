@@ -2,6 +2,7 @@ import React,{ Component } from 'react';
  
 class ShowGWP extends Component {
     state = {
+        inputgwp : 0. ,
         lastgwp : 0. ,
         mingwp : 0. ,
         mindate : '',
@@ -29,6 +30,18 @@ class ShowGWP extends Component {
             mindate : result.minGWP.date
         }));
     }
+	handleChange = (e) => {
+		this.setState({
+			inputgwp: parseFloat(e.target.value)
+		})
+	}
+	handleSubmit = (e) => {
+		e.preventDefault();
+		this.setState({
+            lastgwp : inputgwp,
+            inputgwp : 0.
+		})
+	}
     render() {
         return (
             <div>
@@ -42,6 +55,13 @@ class ShowGWP extends Component {
                         else return (<div>Low-Carbon-Authentification : disable</div>);
                     })()
                 }
+                <form onSubmit={this.handleSubmit}>
+                    <input
+                        placeholder="LastGWP in float"
+                        value={this.state.inputgwp.toString()}
+                        onChange={this.handleChange}
+                    />
+                </form>
                 {this.state.mingwp} <br/>
                 {this.state.mindate} <br/>
             </div>
