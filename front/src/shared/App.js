@@ -17,7 +17,7 @@ class App extends Component {
 							<Link to='/'><li>Home</li></Link>
 							<Link to='/about'><li>About Us</li></Link>
 							<Link to='/testbed'><li>Testbed</li></Link>
-							<Link to='/showgwp'><li></li></Link>
+							<Link to='/showgwp'><li>ShowGWP</li></Link>
 						</ul>
 					</div>
 					<div className='Contents-wrapper'>
