@@ -1,4 +1,5 @@
 import React,{ Component } from 'react';
+import GWP_graph from '../components/gwpgraph';
  
 class ShowGWP extends Component {
     state = {
@@ -45,6 +46,9 @@ class ShowGWP extends Component {
     render() {
         return (
             <div>
+                <GWP_graph
+                    raw_data = {this.state.gwplist}
+                />
                 <b>{this.state.params.syear}-{this.state.params.smonth}-{this.state.params.sday} ~ {this.state.params.fyear}-{this.state.params.fmonth}-{this.state.params.fday} , 25-24-150</b><br/>
                 <b>{this.state.gwplist["2017-12-31"]}</b><br/>
                 <form onSubmit={this.handleSubmit}>
