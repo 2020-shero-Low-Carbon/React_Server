@@ -10,19 +10,23 @@ class App extends Component {
 	render() {
 		return (
 			<div className="App">
-				<div className='Menu-wrapper'>
-					<ul>
-						<Link to='/'><li>Home</li></Link>
-						<Link to='/about'><li>About Us</li></Link>
-						<Link to='/testbed'><li>Testbed</li></Link>
-					</ul>
-				</div>
 				<Router>
-					<Route exact path="/" component={Home}/>
-					<Route exact path="/about" component={About}/>
-					<Route exact path="/testbed" component={Testbed}/>
-					<Route exact path="/data" component={Data}/>
-					<Route exact path="/data2" component={Data2}/>
+					<div className='Menu-wrapper'>
+						<ul>
+							<Link to='/'><li>Home</li></Link>
+							<Link to='/about'><li>About Us</li></Link>
+							<Link to='/testbed'><li>Testbed</li></Link>
+						</ul>
+					</div>
+					<div className='Contents-wrapper'>
+						<Switch>
+							<Route exact path="/" component={Home}/>
+							<Route exact path="/about" component={About}/>
+							<Route exact path="/testbed" component={Testbed}/>
+							<Route exact path="/data" component={Data}/>
+							<Route exact path="/data2" component={Data2}/>
+						</Switch>
+					</div>
 				</Router>
 			</div>
 		);
