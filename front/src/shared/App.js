@@ -11,6 +11,7 @@ class App extends Component {
 	render() {
 		return (
 			<div className="App">
+                <meta charset="UTF-8" />
 				<Router>
 					<div className='Menu-wrapper'>
 						<ul>

@@ -42,10 +42,8 @@ class ShowGWP extends Component {
                         else return (<div>저탄소인증 불가능</div>);
                     })()
                 }
-                <br/>
                 {this.state.mingwp} <br/>
                 {this.state.mindate} <br/>
-
             </div>
         );
     }
