@@ -32,7 +32,7 @@ class ShowGWP extends Component {
     render() {
         return (
             <div>
-                <meta Content-Type:text/html; charset="UTF-8">
+                <meta charset="UTF-8">
                 <b>{this.state.params.syear}-{this.state.params.smonth}-{this.state.params.sday} ~ {this.state.params.fyear}-{this.state.params.fmonth}-{this.state.params.fday} , 25-24-150</b><br/>
                 <b>{this.state.gwplist["2017-12-31"]}</b><br/>
                 {this.state.lastgwp}<br/>
