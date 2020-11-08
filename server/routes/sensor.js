@@ -9,7 +9,7 @@ router.get('/making', (req, res) => {
 	var today = new Date();
 	today.setHours(today.getHours() + 9);
 	date_str = today.getFullYear() + "-" + (today.getMonth()+1) + "-" + today.getDate();
-	db_connection.connect();
+	//db_connection.connect();
 	query_str = 'insert into test_bed (made_date, amount, cement, wsand, msand, bone, water) values(\''+date_str+'\','+req.query.am+','+req.query.cm+','+req.query.ws+','+req.query.ms+','+req.query.bn+','+req.query.wt+')';
 	console.log(query_str)
 	db_connection.query(query_str, (error, rows, fields) => {
