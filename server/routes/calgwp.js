@@ -26,6 +26,7 @@ router.post('/gwp', (req, res) => {
 router.post('/gwplist', (req, res) => {
 	const dates = req.body;
 	var my_dir;
+	var result;
 	console.log(dates);
 	const py_cal_gwplist = spawn('python3', ['../DB/src/gwp_get_min.py', dates.syear, dates.smonth, dates.sday, dates.fyear, dates.fmonth, dates.fday, dates.prod]);
 	py_cal_gwplist.stdout.on('data', function(data){
