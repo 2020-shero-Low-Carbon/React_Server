@@ -36,7 +36,6 @@ router.post('/insert', (req, res) => {
 		db_connection.query('insert into '+params.fact+ '_ (연도, 월, 일, 원료, 기업명, 주소, 입고량, 거리) values('+params.year+','+params.month+','+params.day+','+params.ingredient+','+params.company+','+params.amount+','+distance+')', (error, rows, fields) => {
 			if (error) throw error;
 		});
-		res.send('ingredient information added');
 	});
 });
 
