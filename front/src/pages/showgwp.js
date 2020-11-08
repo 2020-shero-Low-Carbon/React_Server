@@ -31,12 +31,9 @@ class ShowGWP extends Component {
         }));
     }
 	handleChange = (e) => {
-        if(e.target.value = '')e.target.value=0;
-        else if(e.target.value.slice(-1) != '.'){
-		    this.setState({
-			    inputgwp: e.target.value
-		    })
-        }
+        this.setState({
+            inputgwp: e.target.value
+        })
 	}
 	handleSubmit = (e) => {
 		e.preventDefault();
