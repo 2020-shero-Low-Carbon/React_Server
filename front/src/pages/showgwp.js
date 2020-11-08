@@ -38,7 +38,7 @@ class ShowGWP extends Component {
 	handleSubmit = (e) => {
 		e.preventDefault();
 		this.setState({
-            lastgwp : inputgwp,
+            lastgwp : this.state.inputgwp,
             inputgwp : 0.
 		})
 	}
