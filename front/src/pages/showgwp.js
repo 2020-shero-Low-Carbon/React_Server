@@ -31,10 +31,10 @@ class ShowGWP extends Component {
         return (
             <div>
                 <b>{this.state.params.syear}-{this.state.params.smonth}-{this.state.params.sday} ~ {this.state.params.fyear}-{this.state.params.fmonth}-{this.state.params.fday} , 25-24-150</b><br/>
-                <b>{this.state.posts['2017-12-31']}</b>
+               
             </div>
         );
     }
-}
+}// <b>{this.state.posts['2017-12-31']}</b>
 
 export default ShowGWP;
