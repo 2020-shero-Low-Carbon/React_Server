@@ -39,7 +39,7 @@ class ShowGWP extends Component {
                 Cut-Down Rate : 3.3% <br/>
                 {
                     (() => {
-                        if (this.state.lastgwp * 0.967 <= this.state.mingwp) return (<div>Low-Carbon-Authentification : able</div>);
+                        if (this.state.lastgwp * 0.967 >= this.state.mingwp) return (<div>Low-Carbon-Authentification : able</div>);
                         else return (<div>Low-Carbon-Authentification : disable</div>);
                     })()
                 }
