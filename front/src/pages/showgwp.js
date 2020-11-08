@@ -36,11 +36,11 @@ class ShowGWP extends Component {
                 <b>{this.state.params.syear}-{this.state.params.smonth}-{this.state.params.sday} ~ {this.state.params.fyear}-{this.state.params.fmonth}-{this.state.params.fday} , 25-24-150</b><br/>
                 <b>{this.state.gwplist["2017-12-31"]}</b><br/>
                 {this.state.lastgwp}<br/>
-                감축률 : 3.3% <br/>
+                Cut-Down Rate : 3.3% <br/>
                 {
                     (() => {
-                        if (this.state.lastgwp * 0.967 <= this.state.mingwp) return (<div>저탄소인증 가능</div>);
-                        else return (<div></div>);
+                        if (this.state.lastgwp * 0.967 <= this.state.mingwp) return (<div>Low-Carbon-Authentification : able</div>);
+                        else return (<div>Low-Carbon-Authentification : disable</div>);
                     })()
                 }
                 {this.state.mingwp} <br/>
