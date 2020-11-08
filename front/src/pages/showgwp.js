@@ -39,7 +39,7 @@ class ShowGWP extends Component {
 		e.preventDefault();
 		this.setState({
             lastgwp : parseFloat(this.state.inputgwp),
-            inputgwp : 0.
+            inputgwp : ''
 		})
 	}
     render() {
