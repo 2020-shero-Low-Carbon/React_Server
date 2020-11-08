@@ -2,7 +2,7 @@ import React,{ Component } from 'react';
  
 class ShowGWP extends Component {
     state = {
-        inputgwp : 0. ,
+        inputgwp : '' ,
         lastgwp : 0. ,
         mingwp : 0. ,
         mindate : '',
@@ -34,14 +34,14 @@ class ShowGWP extends Component {
         if(e.target.value = '')e.target.value=0;
         else if(e.target.value.slice(-1) != '.'){
 		    this.setState({
-			    inputgwp: parseFloat(e.target.value)
+			    inputgwp: e.target.value
 		    })
         }
 	}
 	handleSubmit = (e) => {
 		e.preventDefault();
 		this.setState({
-            lastgwp : this.state.inputgwp,
+            lastgwp : parseFloat(this.state.inputgwp),
             inputgwp : 0.
 		})
 	}
@@ -61,7 +61,7 @@ class ShowGWP extends Component {
                 <form onSubmit={this.handleSubmit}>
                     <input
                         placeholder="LastGWP in float"
-                        value={this.state.inputgwp.toString()}
+                        value={this.state.inputgwp}
                         onChange={this.handleChange}
                     />
                 </form>
