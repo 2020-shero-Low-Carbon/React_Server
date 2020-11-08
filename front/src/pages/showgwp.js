@@ -24,14 +24,14 @@ class ShowGWP extends Component {
         })
         .then(response => response.json())
         .then(result => this.setState({
-            posts: result
+            gwplist: result
         }));
     }
     render() {
         return (
             <div>
                 <b>{this.state.params.syear}-{this.state.params.smonth}-{this.state.params.sday} ~ {this.state.params.fyear}-{this.state.params.fmonth}-{this.state.params.fday} , 25-24-150</b><br/>
-                <b>{this.state.gwplist['2017-12-31']}</b>
+                <b>{this.state.gwplist["2017-12-31"]}</b>
             </div>
         );
     }
