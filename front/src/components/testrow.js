@@ -22,7 +22,7 @@ class testrow extends Component {
 
 		return (
 			<div style={style}>
-				<div>{this.props.info['made_date'].slice(9)}</div>
+				<div>11111</div>
 			</div>
 		);
 	}
