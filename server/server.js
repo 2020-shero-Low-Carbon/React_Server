@@ -9,6 +9,7 @@ app.use(express.json());
 app.use('/calgwp', require('./routes/calgwp'));
 app.use('/map', require('./routes/map'));
 app.use('/sensor', require('./routes/sensor'));
+app.use('testbed', require('./routes/testbed'));
 
 app.get('/data',(req,res)=>{
     const data = {
