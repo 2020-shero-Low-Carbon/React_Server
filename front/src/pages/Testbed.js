@@ -10,7 +10,7 @@ class Testbed extends Component {
         .then(response => response.json())
         .then(result => {
 			console.log(result);
-		}));
+		});
     }
 
 	render() {
