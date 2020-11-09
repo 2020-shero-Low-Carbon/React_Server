@@ -40,8 +40,12 @@ class Testbed extends Component {
 				<div style = {title_style}>
 					Testbed Page
 				</div>
+				<button onClick={this.handleClick}>Refresh</button>
 				<div style = {{fontSize : '20px', margin : '20px'}}>
 					Virtual GWP : {this.state.vgwp}
+				</div>
+				<div style = {{margin : '20px'}}>
+					
 				</div>
 			</div>
 		);
