@@ -54,6 +54,7 @@ class Testbed extends Component {
 						Virtual GWP : {this.state.vgwp}
 					</div>
 				</div>
+				{JSON.stringify(this.state.infolist)}
 				<div>
 					{list}
 					123
