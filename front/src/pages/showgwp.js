@@ -50,7 +50,7 @@ class ShowGWP extends Component {
         return (
             <div>
                 <div style= {title_style}>
-                    <b> GWP Calculate Page </b>
+                    GWP Calculate Page
                 </div>
                 <div>
                     <GWPgraph
