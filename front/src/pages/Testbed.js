@@ -8,9 +8,9 @@ class Testbed extends Component {
     componentWillMount() {
         fetch('http://34.64.182.81:8000/testbed/showlist')
         .then(response => response.json())
-        .then(result => this.setState({
-            infolist : result
-        }));
+        .then(result => {
+			console.log(result);
+		}));
     }
 
 	render() {
