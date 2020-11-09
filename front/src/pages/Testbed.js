@@ -38,7 +38,7 @@ class Testbed extends Component {
 			info => (
 				<testrow
 					key={info['id']}
-					inco={info}
+					info={info}
 				/>
 			)
 		);
