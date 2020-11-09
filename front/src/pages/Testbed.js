@@ -5,7 +5,7 @@ class Testbed extends Component {
         infolist : {},
     }
 
-    function GetTestList() {
+    componentWillMount() {
         fetch('http://34.64.182.81:8000/testbed/showlist')
         .then(response => response.json())
         .then(result => this.setState({
@@ -13,16 +13,12 @@ class Testbed extends Component {
         }));
     }
 
-    componentWillMount() {
-        GetTestList();
-    }
-
 	render() {
 		return (
 			<div>
 				<h2>
 					Testbed Page<br/>
-                    {infolist[0]}
+                    {this.state.infolist[0]}
 				</h2>
 			</div>
 		);
