@@ -14,7 +14,7 @@ router.get('/showlist', (req, res) => {
 		var indi = [0, 0, 0, 0, 0];
 		var len = result_json['data'].length, total_amount = 0, vgwp = 0;
 		for(var i = 0; i < len; i++) {
-			total_amount += result_json['data'[i]['amount'];
+			total_amount += result_json['data'][i]['amount'];
 			indi[0] += result_json['data'][i]['cement'] * coef[0];
 			indi[1] += result_json['data'][i]['wsand'] * coef[1];
 			indi[2] += result_json['data'][i]['msand'] * coef[2];
