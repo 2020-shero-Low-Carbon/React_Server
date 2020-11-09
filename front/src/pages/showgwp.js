@@ -44,9 +44,12 @@ class ShowGWP extends Component {
 		})
 	}
     render() {
+        const title_style = {
+            font-size : '2.0em'
+        }
         return (
             <div>
-                <div style="{{font-size: 2.0em}}">
+                <div style= {title_style}>
                     <b> GWP Calculate Page </b>
                 </div>
                 <div>
