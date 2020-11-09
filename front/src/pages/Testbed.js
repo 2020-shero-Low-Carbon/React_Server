@@ -40,7 +40,7 @@ class Testbed extends Component {
 				<div style = {title_style}>
 					Testbed Page
 				</div>
-				<div style = {{fontSize : '20px'}}>
+				<div style = {{fontSize : '20px', margin : '20px'}}>
 					Virtual GWP : {this.state.vgwp}
 				</div>
 			</div>
