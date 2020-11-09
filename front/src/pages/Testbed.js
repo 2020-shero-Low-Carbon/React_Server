@@ -55,12 +55,7 @@ class Testbed extends Component {
 					</div>
 				</div>
 				<div>
-					1
-				</div>
-				<div>
-					12
-				</div>
-				<div>
+					{list}
 					123
 				</div>
 			</div>
