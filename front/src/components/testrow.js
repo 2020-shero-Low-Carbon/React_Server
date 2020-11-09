@@ -14,7 +14,7 @@ class testrow extends Component {
 	}
 
 	shouldComponentUpdate(nextProps, nextState){
-		if(this.props.info !=== nextProps.info) return true;
+		if(this.props.info !== nextProps.info) return true;
 	}
 
 	render() {
