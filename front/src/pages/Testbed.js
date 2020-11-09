@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 class Testbed extends Component {
 	state = {
         infolist : [],
+		vgwp : 0. ,
 		isLoaded : false
     }
 
@@ -10,10 +11,25 @@ class Testbed extends Component {
         fetch('http://34.64.182.81:8000/testbed/showlist')
         .then(response => response.json())
         .then(result => this.setState({
-			infolist : result,
+			infolist : result.data,
+			vgwp : result['gwp'],
 			isLoaded : true
         }));
     }
+
+	function handleClick(e) {
+		e.preventDefault();
+        fetch('http://34.64.182.81:8000/testbed/showlist')
+        .then(response => response.json())
+        .then(result => this.setState({
+			infolist : result['data'],
+			vgwp : result['gwp']
+        }));
+	}
+
+	shouldComponentUpdate(nextProps, nextState) {
+		return nextProps.data !== this.props.data;
+	}
 
 	render() {
 		return (
@@ -21,7 +37,7 @@ class Testbed extends Component {
 				Testbed Page<br/>
 				{
 					(() => {
-						if(this.state.isLoaded) return (<div>{this.state.infolist[0]['id']}</div>);
+						if(this.state.isLoaded) return (<div>{this.state.vgwp}</div>);
 						else return (<div>Loading</div>);
 					})()
 				}<br/>
