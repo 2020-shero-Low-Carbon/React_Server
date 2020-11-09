@@ -68,7 +68,7 @@ class ShowGWP extends Component {
                         />
                         <button type="submit">Apply</button>
                     </form>
-                    {this.state.lastgwp}<br/>
+                    Last Authentificated GWP : {this.state.lastgwp}<br/>
                     Cut-Down Rate : 3.3% <br/>
                     {
                         (() => {
@@ -77,7 +77,7 @@ class ShowGWP extends Component {
                         })()
                     }
                     Calculated Minimum GWP : {this.state.mingwp} <br/>
-                    Date When makes GWP Minimum{this.state.mindate} <br/>
+                    Date When makes GWP Minimum : {this.state.mindate} <br/>
                 </div>
             </div>
         );
