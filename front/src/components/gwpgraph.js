@@ -24,7 +24,7 @@ export default class GWPgraph extends PureComponent {
             >
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="date" />
-            <YAxis />
+            <YAxis type="number" domain={[200, 300]}/>
             <Tooltip />
             <Legend />
             <Line type="monotone" dataKey="gwp" stroke="#8884d8" dot = {false} />
