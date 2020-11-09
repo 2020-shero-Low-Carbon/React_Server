@@ -16,8 +16,7 @@ class Testbed extends Component {
 			isLoaded : true
         }));
     }
-
-	function handleClick(e) {
+	handleClick = (e) => {
 		e.preventDefault();
         fetch('http://34.64.182.81:8000/testbed/showlist')
         .then(response => response.json())
@@ -28,7 +27,7 @@ class Testbed extends Component {
 	}
 
 	shouldComponentUpdate(nextProps, nextState) {
-		return nextProps.data !== this.props.data;
+		return nextState.infolist !== this.state.infolist;
 	}
 
 	render() {
