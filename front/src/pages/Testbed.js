@@ -31,15 +31,18 @@ class Testbed extends Component {
 	}
 
 	render() {
+		const title_style = {
+            fontSize : '50px',
+            margin : "20px"
+        }
 		return (
 			<div>
-				Testbed Page<br/>
-				{
-					(() => {
-						if(this.state.isLoaded) return (<div>{this.state.vgwp}</div>);
-						else return (<div>Loading</div>);
-					})()
-				}<br/>
+				<div style = {title_style}>
+					Testbed Page
+				</div>
+				<div style = {{fontSize : '20px'}}>
+					Virtual GWP : {this.state.vgwp}
+				</div>
 			</div>
 		);
 	}	
