@@ -2,7 +2,7 @@ import React, { Component } from 'react';
  
 class Testbed extends Component {
 	state = {
-        infolist : {},
+        infolist : {}
     }
 
     componentWillMount() {
