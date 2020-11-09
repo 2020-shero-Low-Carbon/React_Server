@@ -19,9 +19,6 @@ class Testbed extends Component {
 		return (
 			<div>
 				Testbed Page<br/>
-                {JSON.stringify(this.state.infolist)}<br/>
-				{JSON.stringify(this.state.infolist[0])}<br/>
-				{JSON.stringify(this.state.infolist[1])}<br/>
 				{
 					(() => {
 						if(this.state.isLoaded) return (<div>{this.state.infolist[0]['id']}</div>);
