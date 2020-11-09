@@ -15,8 +15,8 @@ export default class GWPgraph extends PureComponent {
         }
         return (
             <LineChart
-                width={800}
-                height={500}
+                width={600}
+                height={300}
                 data={data}
                 margin={{
                     top: 20, right: 60, left: 10, bottom: 20,
@@ -27,7 +27,7 @@ export default class GWPgraph extends PureComponent {
             <YAxis />
             <Tooltip />
             <Legend />
-            <Line type="monotone" dataKey="gwp" stroke="#8884d8" />
+            <Line type="monotone" dataKey="gwp" stroke="#8884d8" activeDot = {{ r:1}} />
         </LineChart>
         );
     }
