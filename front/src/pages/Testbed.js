@@ -16,10 +16,8 @@ class Testbed extends Component {
 	render() {
 		return (
 			<div>
-				<h2>
-					Testbed Page<br/>
-                    {this.state.infolist[0]['id']}
-				</h2>
+				Testbed Page<br/>
+                {this.state.infolist[0]['id']}
 			</div>
 		);
 	}	
