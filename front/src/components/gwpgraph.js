@@ -3,7 +3,7 @@ import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
 } from 'recharts';
 
-export default class GWP_graph extends PureComponent {
+export default class GWPgraph extends PureComponent {
     render() {
         const raw_data = this.props.raw_data;
         var data = [];
