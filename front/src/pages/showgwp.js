@@ -45,10 +45,11 @@ class ShowGWP extends Component {
 	}
     render() {
         const title_style = {
-            fontSize : '50px'
+            fontSize : '50px',
+            margin : "20px"
         }
         return (
-            <div style={{textAlign : "center"}}>
+            <div>
                 <div style= {title_style}>
                     GWP Calculate Page
                 </div>
@@ -56,6 +57,8 @@ class ShowGWP extends Component {
                     <GWPgraph
                         raw_data = {this.state.gwplist}
                     />
+                </div>
+                <div style= {{margin : "20px"}}>
                     <b>{this.state.params.syear}-{this.state.params.smonth}-{this.state.params.sday} ~ {this.state.params.fyear}-{this.state.params.fmonth}-{this.state.params.fday} , 25-24-150</b><br/>
                     <form onSubmit={this.handleSubmit}>
                         <input
