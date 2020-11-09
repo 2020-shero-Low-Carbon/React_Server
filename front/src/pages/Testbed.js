@@ -20,6 +20,7 @@ class Testbed extends Component {
                 {JSON.stringify(this.state.infolist)}<br/>
 				{JSON.stringify(this.state.infolist[0])}<br/>
 				{JSON.stringify(this.state.infolist[1])}<br/>
+				{this.staet.infolist[0].'id'}<br />
 			</div>
 		);
 	}	
