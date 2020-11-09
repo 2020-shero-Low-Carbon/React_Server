@@ -49,28 +49,30 @@ class ShowGWP extends Component {
                 <div style="font-size: 2.0em;">
                     <b> GWP Calculate Page </b>
                 </div>
-                <GWPgraph
-                    raw_data = {this.state.gwplist}
-                />
-                <b>{this.state.params.syear}-{this.state.params.smonth}-{this.state.params.sday} ~ {this.state.params.fyear}-{this.state.params.fmonth}-{this.state.params.fday} , 25-24-150</b><br/>
-                <form onSubmit={this.handleSubmit}>
-                    <input
-                        placeholder="LastGWP in float"
-                        value={this.state.inputgwp}
-                        onChange={this.handleChange}
+                <div>
+                    <GWPgraph
+                        raw_data = {this.state.gwplist}
                     />
-                    <button type="submit">Apply</button>
-                </form>
-                {this.state.lastgwp}<br/>
-                Cut-Down Rate : 3.3% <br/>
-                {
-                    (() => {
-                        if (this.state.lastgwp * 0.967 >= this.state.mingwp) return (<div>Low-Carbon-Authentification : able</div>);
-                        else return (<div>Low-Carbon-Authentification : disable</div>);
-                    })()
-                }
-                Calculated Minimum GWP : {this.state.mingwp} <br/>
-                Date When makes GWP Minimum{this.state.mindate} <br/>
+                    <b>{this.state.params.syear}-{this.state.params.smonth}-{this.state.params.sday} ~ {this.state.params.fyear}-{this.state.params.fmonth}-{this.state.params.fday} , 25-24-150</b><br/>
+                    <form onSubmit={this.handleSubmit}>
+                        <input
+                            placeholder="LastGWP in float"
+                            value={this.state.inputgwp}
+                            onChange={this.handleChange}
+                        />
+                        <button type="submit">Apply</button>
+                    </form>
+                    {this.state.lastgwp}<br/>
+                    Cut-Down Rate : 3.3% <br/>
+                    {
+                        (() => {
+                            if (this.state.lastgwp * 0.967 >= this.state.mingwp) return (<div>Low-Carbon-Authentification : able</div>);
+                            else return (<div>Low-Carbon-Authentification : disable</div>);
+                        })()
+                    }
+                    Calculated Minimum GWP : {this.state.mingwp} <br/>
+                    Date When makes GWP Minimum{this.state.mindate} <br/>
+                </div>
             </div>
         );
     }
