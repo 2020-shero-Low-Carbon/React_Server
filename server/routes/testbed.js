@@ -10,7 +10,7 @@ router.get('/showlist', (req, res) => {
 		if (error) throw error;
 		var result_json = {};
 		result_json['data'] = rows;
-		const coef = [10.0, 3.0, 4.0, 4.5, 0.3];
+		const coef = [9.6768, 2.8658, 4.25431, 4.43624, 0.332127];
 		var indi = [0, 0, 0, 0, 0];
 		var len = result_json['data'].length, total_amount = 0, vgwp = 0;
 		for(var i = 0; i < len; i++) {
