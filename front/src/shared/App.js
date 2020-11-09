@@ -5,7 +5,7 @@ import Data2 from '../Data2';
 import Home from '../pages/Home';
 import About from '../pages/About';
 import Testbed from '../pages/Testbed';
-import ShowGWP from '../pages/showgwp';
+import ShowGWP from '../pages/Showgwp';
 
 class App extends Component {
 	render() {
