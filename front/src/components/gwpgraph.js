@@ -15,11 +15,11 @@ export default class GWPgraph extends PureComponent {
         }
         return (
             <LineChart
-                width={500}
-                height={300}
+                width={1000}
+                height={500}
                 data={data}
                 margin={{
-                    top: 5, right: 30, left: 20, bottom: 5,
+                    top: 20, right: 60, left: 40, bottom: 20,
                 }}
             >
             <CartesianGrid strokeDasharray="3 3" />
