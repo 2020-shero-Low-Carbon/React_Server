@@ -5,7 +5,7 @@ class Home extends Component {
 		return (
 			<div>
 				<h2>
-					TEAM Low Carbon Page<br>
+					TEAM Low Carbon Page<br/>
 					WELCOME!!
 				</h2>
 			</div>
