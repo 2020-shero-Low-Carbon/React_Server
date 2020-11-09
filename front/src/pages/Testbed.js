@@ -17,6 +17,7 @@ class Testbed extends Component {
 			isLoaded : true
         }));
     }
+
 	handleClick = (e) => {
 		e.preventDefault();
         fetch('http://34.64.182.81:8000/testbed/showlist')
