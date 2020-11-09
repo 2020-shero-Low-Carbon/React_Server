@@ -15,7 +15,7 @@ export default class GWPgraph extends PureComponent {
         }
         return (
             <LineChart
-                width={800}
+                width={1000}
                 height={600}
                 data={data}
                 margin={{

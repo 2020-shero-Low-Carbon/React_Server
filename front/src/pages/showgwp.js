@@ -45,7 +45,7 @@ class ShowGWP extends Component {
 	}
     render() {
         const title_style = {
-            fontsize : '2.0em'
+            fontsize : 20
         }
         return (
             <div>
