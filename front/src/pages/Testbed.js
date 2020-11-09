@@ -53,6 +53,7 @@ class Testbed extends Component {
 					Virtual GWP : {this.state.vgwp}
 				</div>
 				<div style = {{margin : '20px'}}>
+					123123
 					{list}
 				</div>
 			</div>
