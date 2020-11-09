@@ -18,7 +18,7 @@ class Testbed extends Component {
          }
     }
     componentWillMount() {
-        fetch('http://34.64.182.81:8000/calgwp/gwplist', {
+        /*fetch('http://34.64.182.81:8000/calgwp/gwplist', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(this.state.params)
@@ -28,7 +28,7 @@ class Testbed extends Component {
             gwplist : result.listGWP,
             mingwp : result.minGWP.gwp,
             mindate : result.minGWP.date
-        }));
+        }));*/
     }
 	render() {
 		return (
