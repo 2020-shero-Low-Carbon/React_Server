@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import testrow from '../components/testrow';
  
 class Testbed extends Component {
 	state = {
@@ -33,15 +34,24 @@ class Testbed extends Component {
 	render() {
 		const title_style = {
             fontSize : '50px',
-            margin : "20px"
+            margin : '20px'
         }
+		
+		const list = this.state.infolist.map(
+			info => (
+				<testrow
+					key={info['id']}
+					inco={info}
+				/>
+			)
+		);
 		return (
 			<div>
 				<div style = {title_style}>
 					Testbed Page
 				</div>
 				<div style = {{fontSize : '20px', margin : '20px'}}>
-					<button onClick={this.handleClick}>Refresh Data</button><br/>
+					<button onClick={this.handleClick}>Refresh Data</button><br/><br/>
 					Virtual GWP : {this.state.vgwp}
 				</div>
 				<div style = {{margin : '20px'}}>
