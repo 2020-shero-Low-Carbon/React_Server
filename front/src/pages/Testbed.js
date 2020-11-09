@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import testrow from '../components/testrow';
  
 class Testbed extends Component {
 	state = {
@@ -34,10 +33,15 @@ class Testbed extends Component {
             margin : '20px'
         }
 		const data = this.state.infolist;
+		const style = {
+			border: '1px solid black',
+			padding: '8px',
+			margin: '8px'
+		};
 		const list = data.map(
 			info => (
-				<div>
-					{info['id']}
+				<div style={style}>
+					{info['made_date'].slice(9)}
 				</div>
 			)
 		);
