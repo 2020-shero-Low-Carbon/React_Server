@@ -48,7 +48,7 @@ class ShowGWP extends Component {
             fontSize : '50px'
         }
         return (
-            <div>
+            <div style={textAlign: 'center'}>
                 <div style= {title_style}>
                     GWP Calculate Page
                 </div>
