@@ -33,7 +33,7 @@ class Testbed extends Component {
             fontSize : '50px',
             margin : '20px'
         }
-		const {data} = this.state.infolist;
+		const data = this.state.infolist;
 		const list = data.map(
 			info => (
 				<testrow
