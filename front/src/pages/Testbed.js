@@ -41,7 +41,7 @@ class Testbed extends Component {
 		const list = data.map(
 			info => (
 				<div style={style}>
-					{info['made_date'].substring(0,10)} / {info['cement']} / {info['wsand']} / {info['msand']} / {info['bone']} / {info['water']}
+					{info['made_date'].substring(0,10)} / {info['amount']} / {info['cement']} / {info['wsand']} / {info['msand']} / {info['bone']} / {info['water']}
 				</div>
 			)
 		);
@@ -59,7 +59,7 @@ class Testbed extends Component {
 				</div>
 				<div>
 					<div style={style}>
-						DATE / CEMENT / WASHED SAND / CRUSHED SAND / COARSE AGGREGATE / WATER
+						DATE / PRODUCT QUANTITY / CEMENT / WASHED SAND / CRUSHED SAND / COARSE AGGREGATE / WATER
 					</div>
 					{list}
 				</div>
