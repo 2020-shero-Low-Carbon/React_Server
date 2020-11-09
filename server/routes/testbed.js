@@ -8,8 +8,7 @@ router.get('/showlist', (req, res) => {
 	query_str = 'select * from test_bed';
 	db_connection.query(query_str, (error, rows, fields) => {
 		if (error) throw error;
-		console.log(JSON.stringify(rows));
-		res.send('history will be there');
+		res.send(JSON.stringify(rows));
 	});
 });
 
