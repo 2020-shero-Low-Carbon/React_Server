@@ -17,7 +17,7 @@ class Testbed extends Component {
 		return (
 			<div>
 				Testbed Page<br/>
-                {this.state.infolist[0]["amount"]}
+                {JSON.stringify(this.state.infolist)}
 			</div>
 		);
 	}	
