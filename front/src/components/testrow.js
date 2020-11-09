@@ -24,7 +24,7 @@ class testrow extends Component {
 
 		return (
 			<div style={style}>
-				<div>{id}</div>
+				{id}
 			</div>
 		);
 	}

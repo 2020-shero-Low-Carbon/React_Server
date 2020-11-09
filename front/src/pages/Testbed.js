@@ -54,7 +54,15 @@ class Testbed extends Component {
 						Virtual GWP : {this.state.vgwp}
 					</div>
 				</div>
-				{list}
+				<div>
+					1
+				</div>
+				<div>
+					12
+				</div>
+				<div>
+					123
+				</div>
 			</div>
 		);
 	}	
