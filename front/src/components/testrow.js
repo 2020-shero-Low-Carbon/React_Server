@@ -13,10 +13,6 @@ class testrow extends Component {
 		}
 	}
 
-	shouldComponentUpdate(nextProps, nextState){
-		if(this.props.info !== nextProps.info) return true;
-	}
-
 	render() {
 		const style = {
 			border: '1px solid black',

@@ -28,10 +28,6 @@ class Testbed extends Component {
         }));
 	}
 
-	shouldComponentUpdate(nextProps, nextState) {
-		return nextState.infolist !== this.state.infolist;
-	}
-
 	render() {
 		const title_style = {
             fontSize : '50px',
@@ -46,6 +42,7 @@ class Testbed extends Component {
 				/>
 			)
 		);
+
 		return (
 			<div>
 				<div style = {title_style}>
