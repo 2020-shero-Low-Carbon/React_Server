@@ -36,10 +36,9 @@ class Testbed extends Component {
 		const data = this.state.infolist;
 		const list = data.map(
 			info => (
-				<testrow
-					key={info['id']}
-					info={info}
-				/>
+				<div>
+					listlist
+				</div>
 			)
 		);
 
@@ -57,7 +56,6 @@ class Testbed extends Component {
 				{JSON.stringify(this.state.infolist)}
 				<div>
 					{list}
-					123
 				</div>
 			</div>
 		);
