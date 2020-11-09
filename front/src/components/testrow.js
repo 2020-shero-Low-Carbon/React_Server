@@ -20,9 +20,11 @@ class testrow extends Component {
 			margin: '8px'
 		};
 
+		const {id, md, cm, ws, ms, bn, wt} = this.props.info;
+
 		return (
 			<div style={style}>
-				<div>11111</div>
+				<div>{id}</div>
 			</div>
 		);
 	}
