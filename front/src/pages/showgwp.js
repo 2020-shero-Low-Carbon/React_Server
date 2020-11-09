@@ -46,7 +46,9 @@ class ShowGWP extends Component {
     render() {
         return (
             <div>
-                <b font-size="20px"> GWP Calculate Page </b>
+                <div style="font-size: 500%">
+                    <b> GWP Calculate Page </b>
+                </div>
                 <GWPgraph
                     raw_data = {this.state.gwplist}
                 />
