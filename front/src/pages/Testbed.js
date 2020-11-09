@@ -37,7 +37,7 @@ class Testbed extends Component {
 		const list = data.map(
 			info => (
 				<div>
-					listlist
+					{info['id']}
 				</div>
 			)
 		);

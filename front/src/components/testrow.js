@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class testrow extends Component {
+export default class testrow extends Component {
 	static defaultProps = {
 		info: {
 			'id' : 0,
@@ -29,5 +29,3 @@ class testrow extends Component {
 		);
 	}
 }
-
-export default testrow;
