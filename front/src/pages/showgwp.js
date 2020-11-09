@@ -46,6 +46,7 @@ class ShowGWP extends Component {
     render() {
         return (
             <div>
+                <b font-size="20px"> GWP Calculate Page </b>
                 <GWPgraph
                     raw_data = {this.state.gwplist}
                 />
@@ -66,8 +67,8 @@ class ShowGWP extends Component {
                         else return (<div>Low-Carbon-Authentification : disable</div>);
                     })()
                 }
-                {this.state.mingwp} <br/>
-                {this.state.mindate} <br/>
+                Calculated Minimum GWP : {this.state.mingwp} <br/>
+                Date When makes GWP Minimum{this.state.mindate} <br/>
             </div>
         );
     }
