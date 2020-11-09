@@ -27,7 +27,7 @@ export default class GWPgraph extends PureComponent {
             <YAxis />
             <Tooltip />
             <Legend />
-            <Line type="monotone" dataKey="gwp" stroke="#8884d8" activeDot={{ r: 8 }} />
+            <Line type="monotone" dataKey="gwp" stroke="#8884d8" />
         </LineChart>
         );
     }
