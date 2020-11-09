@@ -41,7 +41,7 @@ class Testbed extends Component {
 		const list = data.map(
 			info => (
 				<div style={style}>
-					{info['made_date'].slice(9)}
+					{info['made_date'].substring(0,9)}
 				</div>
 			)
 		);
