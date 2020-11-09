@@ -41,7 +41,7 @@ class Testbed extends Component {
 		const list = data.map(
 			info => (
 				<div style={style}>
-					{info['made_date'].substring(0,9)}
+					{info['made_date'].substring(0,10)} / {info['cement']} / {info['wsand']} / {info['msand']} / {info['bone']} / {info['water']}
 				</div>
 			)
 		);
@@ -57,8 +57,10 @@ class Testbed extends Component {
 						Virtual GWP : {this.state.vgwp}
 					</div>
 				</div>
-				{JSON.stringify(this.state.infolist)}
 				<div>
+					<div style={style}>
+						DATE / CEMENT / WASHED SAND / CRUSHED SAND / COARSE AGGREGATE / WATER
+					</div>
 					{list}
 				</div>
 			</div>
