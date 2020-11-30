@@ -2,9 +2,7 @@
 
 TEAM Low Carbon Server
 
-It is made with Node.js (React, express)
-
-Seperated two server programs, front and backend.
+It is made with two server programs by Node.js (React, express)
 
 How to run : npm run dev
 
